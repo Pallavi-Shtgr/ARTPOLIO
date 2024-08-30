@@ -46,3 +46,17 @@ function eraseText(){
 }
 
 window.onload = typeWriter
+document.getElementById('phone').addEventListener('input', function (e) {
+    // Store the current value of the input
+    let currentValue = this.value;
+
+    // Check if the value contains non-numeric characters
+    if (/[^0-9]/.test(currentValue)) {
+        // Display an error message
+        alert('Please enter only numbers.');
+
+        // Remove non-numeric characters from the input
+        this.value = currentValue.replace(/[^0-9]/g, '');
+    }
+});
+

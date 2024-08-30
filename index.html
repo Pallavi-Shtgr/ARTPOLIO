@@ -7,62 +7,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Dhanush Portfolio</title>
-    <style>
-        /* Additional styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-        .main-container {
-            padding: 20px;
-            text-align: center;
-        }
-        .about-contact-section {
-            background-color: #000;
-            color: #fff;
-            padding: 50px 20px;
-        }
-        .about-contact-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .about-contact-section p {
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .footer {
-            background-color: #222;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .footer p {
-            margin: 0;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        /* Additional styles for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        nav {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-        }
-        .main-container {
-            margin-top: 70px;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -74,7 +18,7 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="art.html">Art Works</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services">Services</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
@@ -84,6 +28,7 @@
                 <a href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="art.html">Art Works</a>
+                <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
@@ -93,20 +38,61 @@
     <section>
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="1000">
-                <img src="main.jpg" alt="">
+                <img src="main.jpg" alt="" style="width: 100%; border-radius: 50%;">
             </div>
             <div class="content">
                 <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Dhanush</span></h1>
                 <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.</p>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I'm a YouTuber, I'm a Designer</p>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/_dhanush_achar?igsh=MTU3NDc4b2ZxeGMzdQ==" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://wa.me/qr/WYOIL4RH2LXCC1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/_dhanush_achar?igsh=MTU3NDc4b2ZxeGMzdQ==" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/message/PHNILLVZNEVJI1?text=Hey%2C%20your%20works%20are%20amazing.%20Will%20you%20take%20my%20order%3F" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/your-profile" class="facebook-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <button>Order now</button>
+                    <a href="https://wa.me/?text=Hey%2C%20your%20works%20are%20amazing.%20Will%20you%20take%20my%20order%3F" target="_blank">
+                        <button>Order now</button>
+                    </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 data-aos="fade-up" data-aos-duration="1500">Services</h2>
+        <div class="services-boxes">
+            <div class="service-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Portraits</h3>
+                <p>Customized hand-drawn or digital portraits capturing the essence of the subject with stunning detail.</p>
+            </div>
+            <div class="service-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
+                <i class="fa-solid fa-brush"></i>
+                <h3>Acrylic Paintings</h3>
+                <p>Beautiful acrylic paintings on canvas that bring colors to life with each stroke.</p>
+            </div>
+            <div class="service-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
+                <i class="fa-solid fa-photo-video"></i>
+                <h3>Photo Frames</h3>
+                <p>High-quality photo frames designed to complement and preserve your cherished memories.</p>
+            </div>
+            <div class="service-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Logo Design</h3>
+                <p>Unique and creative logo designs that effectively represent your brand’s identity.</p>
+            </div>
+            <div class="service-box" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000">
+                <i class="fa-solid fa-paint-roller"></i>
+                <h3>Design Services</h3>
+                <p>Comprehensive design services including branding, graphic design, and visual content creation.</p>
             </div>
         </div>
     </section>
@@ -137,10 +123,18 @@
             <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
                 Feel free to reach out for custom art inquiries, collaborations, or just to say hi. I'm always open to discussing new projects and ideas.
             </p>
-            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-                Email: <a href="mailto:your-email@example.com" style="color: #fff;">your-email@example.com</a><br>
-                Phone: +91-XXXXXXXXXX
-            </p>
+            <form action="mailto:pallavishettigar03@gmail.com" method="post" enctype="multipart/form-data" class="contact-form" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </section> 
 
