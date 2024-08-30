@@ -1,4 +1,3 @@
-91% of storage used … If you run out, you can't create, edit and upload files. Get 100 GB of storage for ₹130.00 ₹35.00/month for 2 months.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Olivia Portfolio</title>
+    <title>Dhanush Portfolio</title>
+    <style>
+        /* Additional styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .about-contact-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 20px;
+        }
+        .about-contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .about-contact-section p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -17,37 +56,37 @@
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Art Works</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="art.html">Art Works</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-    </div>
         <div class="dropdown">
             <div class="links">
                 <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Art Works</a>
-                <!-- <a href="#">Service</a> -->
-                <a href="#">Contact</a>
+                <a href="#about">About</a>
+                <a href="art.html">Art Works</a>
+                <a href="#contact">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
+
     <section>
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="1000">
                 <img src="main.jpg" alt="">
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Dhanush </span></h1>
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Dhanush</span></h1>
                 <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
                 <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/_dhanush_achar?igsh=MTU3NDc4b2ZxeGMzdQ==" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/qr/WYOIL4RH2LXCC1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
                     <button>Order now</button>
@@ -55,6 +94,91 @@
             </div>
         </div>
     </section>
+
+    <section class="about-section" id="about">
+        <div class="container" id="about">
+          
+            <h1><b>ABOUT US</b> </h1><br>
+
+                <h3> Wildlife Photography Association :</h3><br>
+                <p>Welcome to WITH WILDLIFE, where a shared passion for wildlife, photography, and conservation converges into a vibrant community of like-minded individuals.
+                 Our association is a collective effort to celebrate the beauty of the natural world, harness the power of photography for conservation, and foster a global community of wildlife enthusiasts.
+                </p> <br>   
+
+                <h3>Our Mission: Connecting Through Conservation and Creativity :</h3><br>
+                <p>WITH WILDLIFE was founded with a clear mission — to bridge the worlds of creativity and conservation. Through the lens of our diverse community of photographers, we seek to capture and convey the wonders 
+                of wildlife while actively contributing to global conservation efforts. Every image tells a story, and every story contributes
+                to a shared narrative of respect, understanding, and advocacy for the wild
+                </p><br>
+                
+                <h3>Community and Collaboration : </h3> <br>
+                <p>This is a thriving community of photographers, conservationists, educators, and nature enthusiasts. Our association thrives on collaboration, mutual 
+                    support, and the belief that our collective efforts can make a meaningful impact. Whether you're an experienced photographer or just starting your journey, you're welcome here — because it's together that we create something truly remarkable.
+                </p><br>
+                
+                <h3> Diverse Perspectives, United Purpose:</h3> <br>
+                <p>Our members bring a rich tapestry of perspectives to the table. From capturing the grandeur of vast landscapes to highlighting the intricacies of tiny ecosystems, our association values and celebrates this diversity. 
+                It is through these varied lenses that we hope to inspire a deeper appreciation for the incredible biodiversity our planet sustains.</p><br>
+                
+                <h3>Conservation Commitment ( Beyond Pixels) :</h3><br>
+                <p>WITH WILDLIFE isn't just about photographs; it's about action. A percentage of the proceeds generated through our activities, including print sales and collaborative projects, directly contributes to wildlife conservation initiatives. 
+                We believe that through our shared passion, we can actively contribute to the protection of the habitats and species that inspire us.
+                </p><br>
+                
+                <h3>Join the Community - Explore, Learn, Contribute</h3><br>
+                <p>Whether you're here to browse our galleries, participate in community discussions, or contribute your unique perspective, we invite you to become a part of [Association Name]. Together,
+                 let's explore the wonders of wildlife, learn from each other, and actively contribute to the conservation of our planet's natural treasures.</p><br>
+                
+                <h3>Thank you for being a vital part of our community.</h3><br>
+                
+                WITH WILDLIFE<br>
+                www.withwildlife.com<br>
+                
+                Feel free to customize this content to align with the specific goals and values of your wildlife photography association.
+        
+            </div>  
+    </section>
+
+
+    <!-- About and Contact Section -->
+    <!-- <section id="about-contact" class="about-contact-section"> -->
+        <!-- About Section -->
+        <!-- <div id="about">
+            <h2 data-aos="fade-up" data-aos-duration="1500">About Me</h2>
+            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+                Welcome to my creative space! My name is Dhanush Acharya, and I am an artist with a deep passion for capturing the raw beauty of nature and the essence of life through my art. 
+                I specialize in creating stunning portraits and acrylic paintings, but my love for the natural world has also led me to explore wildlife photography. This fusion of art and nature 
+                allows me to convey powerful stories and emotions through my work.
+            </p>
+            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
+                My mission is to bridge the worlds of creativity and conservation, using my skills to raise awareness about the importance of preserving our planet's natural treasures. 
+                Every piece of art I create, whether a detailed portrait or a captivating wildlife scene, is a testament to my dedication to this cause.
+            </p>
+            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                I invite you to explore my portfolio, where you will find a diverse collection of artworks and photographs, each telling its own unique story. 
+                Whether you're here to browse, commission a custom piece, or simply appreciate the beauty of the natural world, I'm grateful for your support and interest in my work.
+            </p>
+        </div> -->
+    
+        <!-- Contact Section -->
+        <!-- <div id="contact" style="margin-top: 50px;">
+            <h2 data-aos="fade-up" data-aos-duration="1500">Contact Me</h2>
+            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">
+                Feel free to reach out for custom art inquiries, collaborations, or just to say hi. I'm always open to discussing new projects and ideas.
+            </p>
+            <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                Email: <a href="mailto:your-email@example.com" style="color: #fff;">your-email@example.com</a><br>
+                Phone: +91-XXXXXXXXXX
+            </p>
+        </div>
+    </section> -->
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p data-aos="fade-up" data-aos-duration="1500">© 2024 Dhanush Acharya. All Rights Reserved.</p>
+    </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({offset:0});
