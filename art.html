@@ -2,147 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-        }
+    <title>filterable responsive lightbox gallery tutorial</title>
 
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
-        .title {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
 
-        .photosto-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-
-        .photo {
-            overflow: hidden;
-        }
-
-        .photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .photo img:hover {
-            transform: scale(1.1);
-        }
-
-        .pagination {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .pagination button {
-            padding: 10px 20px;
-            margin: 5px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .pagination button.disabled {
-            background-color: #555;
-            cursor: not-allowed;
-        }
-    </style>
 </head>
 <body>
-<div>
-   <div class="container">
-      <h3 class="title"><marquee>OUR TOP CAPTURES</marquee></h3>
-      <div class="photosto-container">
-         <!-- Add your images here with class 'photo' -->
-         <div class="photo" data-name="p-1"><img src="Pictures/pic1.jpg" alt=""></div>
-         <div class="photo" data-name="p-2"><img src="Pictures/pic2.jpg" alt=""></div>
-         <div class="photo" data-name="p-3"><img src="Pictures/pic3.jpg" alt=""></div>
-         <div class="photo" data-name="p-4"><img src="Pictures/pic4.jpg" alt=""></div>
-         <div class="photo" data-name="p-5"><img src="Pictures/pic5.jpg" alt=""></div>
-         <div class="photo" data-name="p-6"><img src="Pictures/pic6.jpg" alt=""></div>
-         <div class="photo" data-name="p-7"><img src="Pictures/pic7.jpg" alt=""></div>
-         <div class="photo" data-name="p-8"><img src="Pictures/pic8.jpg" alt=""></div>
-         <div class="photo" data-name="p-9"><img src="Pictures/pic9.jpg" alt=""></div>
-         <div class="photo" data-name="p-10"><img src="Pictures/pic10.jpg" alt=""></div>
-         <div class="photo" data-name="p-11"><img src="Pictures/pic11.jpg" alt=""></div>
-         <div class="photo" data-name="p-12"><img src="Pictures/pic12.jpg" alt=""></div>
-         <div class="photo" data-name="p-13"><img src="Pictures/pic13.jpg" alt=""></div>
-         <div class="photo" data-name="p-14"><img src="Pictures/pic14.jpg" alt=""></div>
-         <div class="photo" data-name="p-15"><img src="Pictures/pic15.jpg" alt=""></div>
-         <div class="photo" data-name="p-16"><img src="Pictures/pic16.jpg" alt=""></div>
-         <div class="photo" data-name="p-17"><img src="Pictures/pic17.jpg" alt=""></div>
-         <div class="photo" data-name="p-18"><img src="Pictures/pic18.jpg" alt=""></div>
-         <div class="photo" data-name="p-19"><img src="Pictures/pic19.jpg" alt=""></div>
-         <div class="photo" data-name="p-20"><img src="Pictures/pic20.jpg" alt=""></div>
-         <div class="photo" data-name="p-21"><img src="Pictures/pic21.jpg" alt=""></div>
-         <div class="photo" data-name="p-22"><img src="Pictures/pic22.jpg" alt=""></div>
-         <div class="photo" data-name="p-23"><img src="Pictures/pic23.jpg" alt=""></div>
-         <div class="photo" data-name="p-24"><img src="Pictures/pic24.jpg" alt=""></div>
-         <div class="photo" data-name="p-25"><img src="Pictures/pic25.jpg" alt=""></div>
-         <div class="photo" data-name="p-26"><img src="Pictures/pic26.jpg" alt=""></div>
-         <div class="photo" data-name="p-27"><img src="Pictures/pic27.jpg" alt=""></div>
-      </div>
 
-      <!-- Pagination buttons -->
-      <div class="pagination">
-         <button id="prev" class="disabled">Previous</button>
-         <button id="next">Next</button>
-      </div>
-   </div>
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="ice-cream">ice-cream</li>
+        <li class="buttons" data-filter="chocolate">chocolate</li>
+        <li class="buttons" data-filter="cake">cake</li>
+        <li class="buttons" data-filter="juice">juice</li>
+        <li class="buttons" data-filter="sandwich">sandwich</li>
+    </ul>
+
+    <div class="image-container">
+
+        <a href="images/ice-cream1.jpg" class="image ice-cream">
+            <img src="images/ice-cream1.jpg" alt="">
+        </a>
+        <a href="images/ice-cream2.jpg" class="image ice-cream">
+            <img src="images/ice-cream2.jpg" alt="">
+        </a>
+        <a href="images/ice-cream3.jpg" class="image ice-cream">
+            <img src="images/ice-cream3.jpg" alt="">
+        </a>
+
+        <a href="images/chocolate1.jpg" class="image chocolate">
+            <img src="images/chocolate1.jpg" alt="">
+        </a>
+        <a href="images/chocolate2.jpg" class="image chocolate">
+            <img src="images/chocolate2.jpg" alt="">
+        </a>
+
+        <a href="images/cake1.jpg" class="image cake">
+            <img src="images/cake1.jpg" alt="">
+        </a>
+        <a href="images/cake2.jpg" class="image cake">
+            <img src="images/cake2.jpg" alt="">
+        </a>
+        <a href="images/cake3.jpg" class="image cake">
+            <img src="images/cake3.jpg" alt="">
+        </a>
+        <a href="images/cake4.jpg" class="image cake">
+            <img src="images/cake4.jpg" alt="">
+        </a>
+        <a href="images/cake5.jpg" class="image cake">
+            <img src="images/cake5.jpg" alt="">
+        </a>
+
+        <a href="images/juice1.jpg" class="image juice">
+            <img src="images/juice1.jpg" alt="">
+        </a>
+        <a href="images/juice2.jpg" class="image juice">
+            <img src="images/juice2.jpg" alt="">
+        </a>
+        <a href="images/juice3.jpg" class="image juice">
+            <img src="images/juice3.jpg" alt="">
+        </a>
+
+        <a href="images/sandwich1.jpg" class="image sandwich">
+            <img src="images/sandwich1.jpg" alt="">
+        </a>
+        <a href="images/sandwich2.jpg" class="image sandwich">
+            <img src="images/sandwich2.jpg" alt="">
+        </a>
+        <a href="images/sandwich3.jpg" class="image sandwich">
+            <img src="images/sandwich3.jpg" alt="">
+        </a>
+        <a href="images/sandwich4.jpg" class="image sandwich">
+            <img src="images/sandwich4.jpg" alt="">
+        </a>
+
+    </div>
+
 </div>
 
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 <script>
-    var itemsPerPage = 12; // 4 items per row, 3 rows per page
-    var currentPage = 1;
-    var totalItems = document.querySelectorAll('.photosto-container .photo').length;
-    var totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    function updatePagination() {
-        var startItem = (currentPage - 1) * itemsPerPage;
-        var endItem = startItem + itemsPerPage;
+$(document).ready(function(){
 
-        document.querySelectorAll('.photosto-container .photo').forEach(function(item, index) {
-            item.style.display = (index >= startItem && index < endItem) ? 'block' : 'none';
-        });
+    $('.buttons').click(function(){
 
-        document.getElementById('prev').classList.toggle('disabled', currentPage === 1);
-        document.getElementById('next').classList.toggle('disabled', currentPage === totalPages);
-    }
+        $(this).addClass('active').siblings().removeClass('active');
 
-    document.getElementById('prev').addEventListener('click', function() {
-        if (currentPage > 1) {
-            currentPage--;
-            updatePagination();
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
         }
+
     });
 
-    document.getElementById('next').addEventListener('click', function() {
-        if (currentPage < totalPages) {
-            currentPage++;
-            updatePagination();
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
         }
+
     });
 
-    updatePagination();
+});
+
 </script>
+    
 </body>
 </html>
