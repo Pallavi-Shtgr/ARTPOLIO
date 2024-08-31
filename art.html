@@ -66,6 +66,25 @@
         .item img:hover {
             transform: scale(1.1);
         }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pagination button.disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
@@ -86,7 +105,7 @@
 
         <!--  *****  Gallery Section Starts  *****  -->
         <div class="gallery">
-            <!--  *****  Portraits Section Starts  *****  -->
+            <!--  *****  Add Your Images Here  *****  -->
             <div class="item portraits"><img src="images/portrait1.jpg"></div>
             <div class="item portraits"><img src="images/portrait2.jpg"></div>
             <div class="item portraits"><img src="images/portrait3.jpg"></div>
@@ -108,23 +127,23 @@
             <div class="item portraits"><img src="images/portrait19.jpg"></div>
             <div class="item portraits"><img src="images/portrait20.jpg"></div>
             <div class="item portraits"><img src="images/portrait21.jpg"></div>
-            <!--  *****  Portraits Section Ends  *****  -->
-
-            <!--  *****  Designs Section Starts  *****  -->
             <div class="item design"><img src="images/design1.jpg"></div>
             <div class="item design"><img src="images/design2.jpg"></div>
             <div class="item design"><img src="images/design3.jpg"></div>
             <div class="item design"><img src="images/design4.jpg"></div>
             <div class="item design"><img src="images/design5.jpg"></div>
-            <!--  *****  Designs Section Ends  *****  -->
-
-            <!--  *****  Logo Section Starts  *****  -->
             <div class="item logo"><img src="images/logo1.jpg"></div>
             <div class="item logo"><img src="images/logo2.jpg"></div>
             <div class="item logo"><img src="images/logo3.jpg"></div>
-            <!--  *****  Logo Section Ends  *****  -->
         </div>
         <!--  *****  Gallery Section Ends  *****  -->
+
+        <!--  *****  Pagination Section Starts  *****  -->
+        <div class="pagination">
+            <button id="prev" class="disabled">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <!--  *****  Pagination Section Ends  *****  -->
     </main>
 </section>
 
@@ -148,7 +167,40 @@
         $galleryContainer.isotope({
             filter: value 
         });
+        updatePagination();
     });
+
+    var itemsPerPage = 12; // 4 items per row, 3 rows per page
+    var currentPage = 1;
+    var totalItems = $('.gallery .item').length;
+    var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    function updatePagination() {
+        var startItem = (currentPage - 1) * itemsPerPage;
+        var endItem = startItem + itemsPerPage;
+
+        $('.gallery .item').hide();
+        $('.gallery .item').slice(startItem, endItem).show();
+
+        $('#prev').toggleClass('disabled', currentPage === 1);
+        $('#next').toggleClass('disabled', currentPage === totalPages);
+    }
+
+    $('#prev').on('click', function() {
+        if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+        }
+    });
+
+    $('#next').on('click', function() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+        }
+    });
+
+    updatePagination();
 </script>
 </body>
 </html>
