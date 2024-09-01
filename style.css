@@ -63,13 +63,13 @@ nav {
     max-width: 600px;
 }
 
-.typewriter {
+/* .typewriter {
     font-size: 18px;
     border-right: 2px solid #fff;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-}
+} */
 
 @keyframes typing {
     from { width: 0; }
