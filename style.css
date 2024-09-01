@@ -10,6 +10,7 @@ body {
 a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
 }
 
 /* Navbar */
@@ -29,7 +30,7 @@ nav {
 }
 
 .logo span {
-    color: #f39c12;
+    color: #60b7b6;
 }
 
 .links {
@@ -57,6 +58,7 @@ nav {
     border-radius: 50%;
     width: 200px; /* Adjust width as needed */
     height: auto;
+    margin-bottom: 20px;
 }
 
 .content {
@@ -93,7 +95,7 @@ nav {
 }
 
 .social-links a:hover {
-    color: #ff69b4; /* Pink color on hover */
+    color: #629df1; /* Pink color on hover */
 }
 
 .facebook-button {
@@ -106,7 +108,7 @@ nav {
 
 /* Button Styles */
 .btn button {
-    background-color: #ff69b4; /* Pink color */
+    background-color: #d6ba3c; /* Pink color */
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -115,7 +117,7 @@ nav {
 }
 
 .btn button:hover {
-    background-color: #ff1493; /* Darker pink on hover */
+    background-color: #85b003; /* Darker pink on hover */
 }
 
 /* Services Section */
@@ -173,7 +175,7 @@ nav {
 }
 
 .contact-form button {
-    background-color: #ff69b4; /* Pink color */
+    background-color: #8a69ff; /* Pink color */
     border: none;
     padding: 10px;
     color: #fff;
@@ -181,7 +183,7 @@ nav {
 }
 
 .contact-form button:hover {
-    background-color: #ff1493; /* Darker pink on hover */
+    background-color: #5107b7; /* Darker pink on hover */
 }
 
 /* Footer */
@@ -191,35 +193,145 @@ nav {
     text-align: center;
 }
 
-     /* Responsive Styles */
-     @media (max-width: 768px) {
-        .nav-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .hamburg {
-            display: block;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-        .dropdown {
-            display: block;
-        }
-        .links {
-            display: none;
-        }
-        .dropdown .links a {
-            padding: 15px;
-            font-size: 1.2em;
-        }
-        .main-container {
-            padding: 10px;
-        }
-        .services-boxes {
-            flex-direction: column;
-            align-items: center;
-        }
-        .service-box {
-            max-width: 100%;
-        }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
+    .hamburg {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    .dropdown {
+        display: block;
+    }
+    .links {
+        display: none;
+    }
+    .dropdown .links a {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+    .main-container {
+        padding: 10px;
+    }
+    .services-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box {
+        max-width: 100%;
+    }
+}
+
+/* Contact Details */
+.contact-details {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: #abca3c; /* Pink color for links */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown styles */
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with some transparency */
+    z-index: 1000; /* Ensure it appears on top of other content */
+    overflow-y: auto; /* Allow scrolling if the content exceeds the screen height */
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.dropdown .links a {
+    display: block;
+    padding: 15px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.dropdown .links a.active {
+    font-size: 30px; /* Make the active link larger */
+    color: #6589ca; /* Optional: Change color when active */
+}
+
+.dropdown .cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Services Section */
+.services-section {
+    padding: 50px;
+    background-color: #222;
+}/* Services Section */
+.services-section {
+    padding: 50px;
+    background-color: #222;
+}
+
+.services-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #333; /* Default background color for all service boxes */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Specific styles for "Portraits," "Acrylic Paintings," "Logo Design," and "Design Services" */
+.service-box:nth-child(1), /* Portraits */
+.service-box:nth-child(2), /* Acrylic Paintings */
+.service-box:nth-child(3), 
+.service-box:nth-child(4), /* Logo Design */
+.service-box:nth-child(5) { /* Design Services */
+    background-color: #003366; /* Dark Blue */
+    color: #fff; /* Text color */
+}
+
+.service-box i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    color: #fff; /* Ensure text color is white for readability */
+}
