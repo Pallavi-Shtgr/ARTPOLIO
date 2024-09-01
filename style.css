@@ -18,7 +18,7 @@ nav {
     background-color: #333;
 }
 .content h1 {
-    color: #68c1e1; /* Red color, you can replace this with any color you prefer */
+    color: #60b7b6; 
 }
 
 .nav-container {
@@ -113,7 +113,7 @@ nav {
 
 /* Button Styles */
 .btn button {
-    background-color: #d6ba3c; /* Pink color */
+    background-color: #edc03b; /* Pink color */
     border: none;
     padding: 10px 20px;
     color: #fff;
@@ -122,7 +122,7 @@ nav {
 }
 
 .btn button:hover {
-    background-color: #85b003; /* Darker pink on hover */
+    background-color: #ea910d; /* Darker pink on hover */
 }
 
 /* Services Section */
@@ -242,7 +242,7 @@ nav {
 }
 
 .contact-details a {
-    color: #abca3c; /* Pink color for links */
+    color: #74889b;
     text-decoration: none;
 }
 
