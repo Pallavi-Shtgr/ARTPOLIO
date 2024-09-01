@@ -9,13 +9,16 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #3a5560;
     font-weight: bold;
 }
 
 /* Navbar */
 nav {
     background-color: #333;
+}
+.content h1 {
+    color: #68c1e1; /* Red color, you can replace this with any color you prefer */
 }
 
 .nav-container {
@@ -72,6 +75,8 @@ nav {
     overflow: hidden;
     animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
 } */
+
+
 
 @keyframes typing {
     from { width: 0; }
