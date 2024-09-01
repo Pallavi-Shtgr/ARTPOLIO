@@ -190,3 +190,36 @@ nav {
     padding: 15px;
     text-align: center;
 }
+
+     /* Responsive Styles */
+     @media (max-width: 768px) {
+        .nav-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hamburg {
+            display: block;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .dropdown {
+            display: block;
+        }
+        .links {
+            display: none;
+        }
+        .dropdown .links a {
+            padding: 15px;
+            font-size: 1.2em;
+        }
+        .main-container {
+            padding: 10px;
+        }
+        .services-boxes {
+            flex-direction: column;
+            align-items: center;
+        }
+        .service-box {
+            max-width: 100%;
+        }
+    }
