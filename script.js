@@ -108,7 +108,6 @@ document.addEventListener('click', function(event) {
         });
     });
 
-    // script.js
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.nav-container .link a');
     const dropdownLinks = document.querySelectorAll('.dropdown .links a');
